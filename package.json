@@ -1,0 +1,23 @@
+{
+  "name": "tests-lab",
+  "version": "1.0.0",
+  "description": "This is node tests lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudinary-misha/node-tests-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudinary-misha/node-tests-lab/issues"
+  },
+  "homepage": "https://github.com/cloudinary-misha/node-tests-lab#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}
