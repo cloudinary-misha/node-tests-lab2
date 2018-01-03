@@ -14,8 +14,9 @@ describe('Environement settings', function() {
       assert.equal(process.env.TEST, "yes");
     });
     
-    it('it should return env variable CUSTOM_VAR=yes', function() {
-      assert.equal(process.env.CUSTOM_VAR, "yes");
+    var bool = process.env.UPLOAD_PREFIX == "api" || process.env.UPLOAD_PREFIX = "staging-api"
+    it('UPLOAD_PREFIX should be api or staging-api', function() {
+      assert.ok(bool);
     });
   });
 });
