@@ -14,8 +14,8 @@ describe('Environement settings', function() {
       assert.equal(process.env.TEST, "yes");
     });
     
-    var bool = (process.env.UPLOAD_PREFIX == "api" || process.env.UPLOAD_PREFIX == "staging-api");
-    it('UPLOAD_PREFIX should be api or staging-api', function() {
+    var bool = !!(process.env.CLOUDINARY_URL);
+    it('CLOUDINARY_URL should exist', function() {
       assert.ok(bool);
     });
   });
