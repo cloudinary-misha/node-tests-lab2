@@ -10,14 +10,19 @@ describe('Array', function() {
 
 describe('Environement settings', function() {
   describe('#Environment variables are set', function() {
-    it('it should return env variable TEST=yes', function() {
-      assert.equal(process.env.TEST, "yes");
-    });
+
+    if(process.env.TRAVIS_BRANCH.indexOf('master')>-1){
+      it('it should check CLOUDINARY_URL for MASTER', function() {
+        assert.equal(process.env.CLOUDINARY_URL, "prod");
+      });
+    }
     
-    var bool = !!(process.env.CLOUDINARY_URL);
-    it('CLOUDINARY_URL should exist', function() {
-      assert.ok(bool);
-    });
+    if(process.env.TRAVIS_BRANCH.indexOf('staging_branch')>-1){
+      it('it should check CLOUDINARY_URL for STAGING', function() {
+        assert.equal(process.env.CLOUDINARY_URL, "cloudinary://123123123123:kjbaskdjaksdj@misha");
+      });
+    }
+    
   });
 });
 
