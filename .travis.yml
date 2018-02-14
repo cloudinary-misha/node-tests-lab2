@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - "8"
   - "6"
-before_script:
-- if [[ $TRAVIS_BRANCH == *"staging_branch"* ]]; then export CLOUDINARY_URL=$CLOUDINARY_URL_STAGING; fi
 install:
   - npm install
+branches:
+  except:
+  - staging-test
+
