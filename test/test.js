@@ -22,7 +22,7 @@ describe('Environement settings', function() {
         assert.equal(process.env.CLOUDINARY_URL, "cloudinary://123123123123:kjbaskdjaksdj@misha");
       });
     }
-    
+    assert.equal("bla", "bla1");
   });
 });
 
